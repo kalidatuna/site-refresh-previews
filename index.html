@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Homepage concept previews</title>
+  <style>
+    body{margin:0;background:#f4f2ed;color:#192126;font-family:Arial,sans-serif}
+    main{max-width:1100px;margin:0 auto;padding:56px 24px 90px}
+    h1{font-size:38px;margin:0 0 12px}.sub{color:#62696d;margin-bottom:38px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+    a{display:block;background:#fff;border-radius:18px;padding:14px;text-decoration:none;color:inherit;box-shadow:0 8px 30px rgba(20,30,35,.08)}
+    img{display:block;width:100%;border-radius:12px}
+    strong{display:block;margin:13px 4px 5px;font-size:17px}.note{margin:0 4px 7px;color:#62696d;font-size:14px}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Homepage concept previews</h1>
+    <p class="sub">Lightweight visual directions prepared from publicly visible business information.</p>
+    <div class="grid" id="grid"></div>
+  </main>
+  <script>
+    const items=[
+      ["Bland Roofing Company","bland-roofing"],
+      ["Bob McKeithen & Sons Roofing","mckeithen-roofing"],
+      ["M.R. Roberson Roofing","mr-roberson"],
+      ["Five Star General Contracting & Roofing","five-star-gc"],
+      ["Arden Roofing & Restorations","arden"],
+      ["Riley Services","riley-services"],
+      ["Georgia Air Contractors","georgia-air"],
+      ["Routine Maintenance Inc.","routine-maintenance"],
+      ["HRS Sheet Metal","hrs-sheet-metal"],
+      ["Kennedy Construction Groups","kennedy-roofing"]
+    ];
+    document.querySelector("#grid").innerHTML=items.map(([name,slug])=>`
+      <a href="mockups/${slug}.png">
+        <img src="mockups/${slug}.png" alt="${name} homepage concept">
+        <strong>${name}</strong>
+        <p class="note">Homepage concept preview</p>
+      </a>`).join("");
+  </script>
+</body>
+</html>
