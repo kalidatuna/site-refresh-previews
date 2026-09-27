@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scry pricing clarity concept</title>
+  <style>
+    :root{--ink:#12151a;--muted:#66707d;--line:#d9dee5;--paper:#f8f7f2;--card:#fff;--accent:#235d4a}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .shell{max-width:1160px;margin:0 auto;padding:28px 24px 72px}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:84px}
+    .brand{font-weight:760;letter-spacing:-.04em;font-size:24px}nav{display:flex;gap:22px;color:var(--muted);font-size:14px}.hero{max-width:780px;margin-bottom:52px}
+    .eyebrow{color:var(--accent);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.09em}h1{font-size:clamp(44px,7vw,78px);line-height:.98;letter-spacing:-.06em;margin:14px 0 22px}
+    .hero p{color:var(--muted);font-size:20px;max-width:700px}.explain{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--card);margin:34px 0 42px}
+    .explain strong{display:block;margin-bottom:4px}.example{color:var(--muted);font-size:14px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .card{min-height:320px;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--card)}.card.featured{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+    .plan{font-weight:720;font-size:18px}.price{font-size:33px;font-weight:760;letter-spacing:-.04em;margin:18px 0 6px}.price small{font-size:14px;font-weight:500;color:var(--muted);letter-spacing:0}
+    .desc{min-height:58px;color:var(--muted);font-size:14px}ul{list-style:none;padding:0;margin:20px 0 26px}li{margin:9px 0;font-size:14px}li::before{content:"✓";margin-right:8px;color:var(--accent)}
+    .cta{margin-top:auto;display:block;text-align:center;text-decoration:none;border-radius:10px;padding:11px 14px;border:1px solid var(--ink);color:var(--ink);font-weight:650;font-size:14px}.featured .cta{background:var(--ink);color:#fff}
+    .foot{margin-top:30px;padding-top:24px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:24px;color:var(--muted);font-size:14px}.foot strong{color:var(--ink)}
+    @media(max-width:880px){.cards{grid-template-columns:1fr 1fr}.explain,.foot{grid-template-columns:1fr}}@media(max-width:560px){header{margin-bottom:52px}nav{display:none}.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header><div class="brand">scry</div><nav><span>Docs</span><span>Examples</span><span>Pricing</span><span>Sign in</span></nav></header>
+    <section class="hero">
+      <div class="eyebrow">Pricing, without the decoding step</div>
+      <h1>Search billions of documents. Pay for the compute you use.</h1>
+      <p>Start free for non-commercial research. Commercial teams get dedicated capacity. Automated agents can buy bounded query time without opening an account.</p>
+    </section>
+    <section class="explain">
+      <div><strong>How metered pricing works</strong>You set a time budget before an agent query starts. That declared time box is what Scry charges for, so the maximum cost is known before execution.</div>
+      <div class="example"><strong>Example</strong>A 4-second agent query at $0.05 per declared second costs $0.20. Most interactive API-key queries use balance-based metering instead.</div>
+    </section>
+    <section class="cards">
+      <article class="card featured"><div class="plan">Researcher</div><div class="price">$0</div><div class="desc">For people exploring Scry on non-commercial projects.</div><ul><li>$5 signup credit</li><li>No card required</li><li>API key and MCP access</li></ul><a class="cta" href="#">Start free</a></article>
+      <article class="card"><div class="plan">Patron</div><div class="price">$100 <small>/ month</small></div><div class="desc">For heavy non-commercial users who want predictable recurring credit.</div><ul><li>$100 added to balance monthly</li><li>Unused balance rolls over</li><li>Non-commercial use</li></ul><a class="cta" href="#">Become a patron</a></article>
+      <article class="card"><div class="plan">Team</div><div class="price">$2,000+ <small>/ month</small></div><div class="desc">For companies building products and internal research on Scry.</div><ul><li>Commercial use</li><li>Dedicated capacity</li><li>Custom source builds</li></ul><a class="cta" href="#">Contact Scry</a></article>
+      <article class="card"><div class="plan">Agents</div><div class="price">$0.05 <small>/ declared second</small></div><div class="desc">For autonomous callers that need a hard cost ceiling before a query runs.</div><ul><li>No account required</li><li>x402 payment</li><li>Cost bounded up front</li></ul><a class="cta" href="#">Read agent guide</a></article>
+    </section>
+    <section class="foot"><div><strong>Design goal:</strong> make the commercial boundary, billing unit, and next action obvious in one scan.</div><div><strong>Concept only:</strong> copy and structure are based on Scry's public pricing and docs as viewed on 27 Sep 2026.</div></section>
+  </main>
+</body>
+</html>
