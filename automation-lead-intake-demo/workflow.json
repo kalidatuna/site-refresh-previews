@@ -1,0 +1,57 @@
+{
+  "name": "Lead Intake Reliability Demo",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-intake-demo",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "3c3b0660-1c5f-4c5b-a0b1-1d8f57ac7001",
+      "name": "Lead Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body ?? $json;\nconst clean = (v) => typeof v === 'string' ? v.trim() : '';\nconst name = clean(body.name);\nconst email = clean(body.email).toLowerCase();\nconst company = clean(body.company);\nconst message = clean(body.message);\nconst source = clean(body.source) || 'unknown';\nconst emailOk = /^[^\\\\s@]+@[^\\\\s@]+\\\\.[^\\\\s@]+$/.test(email);\nconst errors = [];\nif (!emailOk) errors.push('valid email is required');\nif (message.length < 10) errors.push('message must be at least 10 characters');\nconst fingerprint = [email, company.toLowerCase()].filter(Boolean).join('|');\nconst intentText = (message + ' ' + (body.service || '')).toLowerCase();\nconst priorityTerms = ['quote','estimate','integration','automation','website','shopify','api','booking','checkout'];\nconst matchedTerms = priorityTerms.filter((term) => intentText.includes(term));\nreturn [{ json: {\n  valid: errors.length === 0,\n  errors,\n  lead: { name, email, company, message, source },\n  fingerprint,\n  routing: matchedTerms.length >= 2 ? 'priority' : 'standard',\n  matched_terms: matchedTerms,\n  received_at: new Date().toISOString()\n} }];"
+      },
+      "id": "3c3b0660-1c5f-4c5b-a0b1-1d8f57ac7002",
+      "name": "Normalize Validate Route",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        20,
+        0
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Lead Webhook": {
+      "main": [
+        [
+          {
+            "node": "Normalize Validate Route",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3c3b0660-1c5f-4c5b-a0b1-1d8f57ac7003",
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}
