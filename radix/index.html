@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radix landing-page clarity concept</title>
+<style>
+:root{--bg:#f5f3ee;--ink:#151515;--muted:#696969;--line:#d8d4ca;--card:#fff;--accent:#e85d34}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,sans-serif}.wrap{max-width:1120px;margin:auto;padding:24px 24px 80px}
+header{display:flex;justify-content:space-between;align-items:center;padding-bottom:70px}.logo{font-weight:800;font-size:23px}.nav{display:flex;gap:22px;color:var(--muted);font-size:14px}
+.hero{max-width:820px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:13px;background:#fff}
+h1{font-size:clamp(48px,7vw,84px);line-height:.98;letter-spacing:-.065em;margin:18px 0 22px}.lead{font-size:21px;color:var(--muted);max-width:720px}.buttons{display:flex;gap:10px;margin:28px 0 68px}.btn{padding:12px 17px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px}.primary{background:var(--ink);color:#fff}.secondary{border:1px solid var(--line);color:var(--ink);background:#fff}
+.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}.demoHead{display:flex;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line);font-size:14px}.badge{color:var(--accent);font-weight:800}
+.grid{display:grid;grid-template-columns:.85fr 1.15fr;min-height:420px}.prompt{padding:28px;border-right:1px solid var(--line)}.prompt p{color:var(--muted)}.code{background:#1e1e1e;color:#ddd;border-radius:12px;padding:16px;font:13px/1.6 ui-monospace,SFMono-Regular,monospace;margin-top:20px}
+.widget{padding:28px}.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:22px 0}.swatch{height:58px;border-radius:10px;border:1px solid #ddd}.swatch:nth-child(1){background:#151515}.swatch:nth-child(2){background:#e85d34}.swatch:nth-child(3){background:#eacb75}.swatch:nth-child(4){background:#92b7a5}.swatch:nth-child(5){background:#e9e6de}
+.output{padding:16px;border:1px solid var(--line);border-radius:12px;background:#fafafa}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.step{border-top:2px solid var(--ink);padding-top:12px}.step b{display:block;margin-bottom:5px}.step span{color:var(--muted);font-size:14px}
+.note{margin-top:34px;color:var(--muted);font-size:13px}@media(max-width:720px){.nav{display:none}.grid,.steps{grid-template-columns:1fr}.prompt{border-right:0;border-bottom:1px solid var(--line)}header{padding-bottom:45px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header><div class="logo">radix</div><div class="nav"><span>How it works</span><span>Notes</span><span>Download</span></div></header>
+<section class="hero">
+<div class="pill">Visual workspaces for coding agents</div>
+<h1>Ask for a tool. Get an interface you can actually use.</h1>
+<p class="lead">Radix turns an agent response into a persistent interactive workspace. Instead of getting another wall of text, you get HTML you can click, inspect, comment on, and keep beside your code.</p>
+<div class="buttons"><a class="btn primary" href="#">Try Radix free</a><a class="btn secondary" href="#">See the 60-second example</a></div>
+</section>
+<section class="demo">
+<div class="demoHead"><strong>Start with one obvious example</strong><span class="badge">COLOR PICKER</span></div>
+<div class="grid">
+<div class="prompt">
+<h2>1. Ask your coding agent</h2>
+<p>“Add a color picker for the theme tokens in this project.”</p>
+<div class="code">agent → creates an interactive workspace<br>radix → keeps it locally on disk<br>you → tweak values visually</div>
+</div>
+<div class="widget">
+<h2>2. Work with the result</h2>
+<p>Pick a color in the workspace. The interface updates the code directly, while your agent stays available for bigger changes.</p>
+<div class="swatches"><div class="swatch"></div><div class="swatch"></div><div class="swatch"></div><div class="swatch"></div><div class="swatch"></div></div>
+<div class="output"><strong>Theme token</strong><br><code>--accent: #e85d34;</code></div>
+<div class="steps">
+<div class="step"><b>Generate</b><span>Your agent returns a useful interface instead of plain markdown.</span></div>
+<div class="step"><b>Interact</b><span>Use controls, diagrams, experiments, or visualizations directly.</span></div>
+<div class="step"><b>Keep</b><span>The workspace persists locally and can evolve with the project.</span></div>
+</div>
+</div>
+</div>
+</section>
+<p class="note">Unsolicited concept based only on the founder's public Show HN explanation. It is meant to demonstrate a clearer first-screen story, not to copy Radix's current visual design.</p>
+</main>
+</body>
+</html>
