@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Responsive e-commerce storefront implementation proof by David Jamburia.">
+  <title>Northline Supply | Storefront implementation proof</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Northline Supply home">NORTHLINE</a>
+    <nav aria-label="Primary"><a href="#shop">Shop</a><a href="#proof">Build notes</a></nav>
+    <button class="cart-button" id="cartToggle" aria-controls="cartDrawer" aria-expanded="false">Cart <span id="cartCount" aria-live="polite">0</span></button>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Implementation proof</p>
+      <h1>A small storefront built around real purchase behavior.</h1>
+      <p>Responsive catalog, product variants, persistent cart state, quantity controls, checkout validation and accessible interactions. No framework or paid service required.</p>
+      <a class="primary" href="#shop">Browse products</a>
+    </section>
+    <section class="shop" id="shop" aria-labelledby="shopTitle">
+      <div class="section-heading">
+        <div><p class="eyebrow">Catalog</p><h2 id="shopTitle">Everyday carry</h2></div>
+        <label class="filter">Filter
+          <select id="categoryFilter">
+            <option value="all">All products</option>
+            <option value="bags">Bags</option><option value="desk">Desk</option><option value="travel">Travel</option>
+          </select>
+        </label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    <section class="proof" id="proof">
+      <p class="eyebrow">What this proves</p><h2>Small implementation, complete path.</h2>
+      <ul>
+        <li>Product data drives the UI rather than duplicated markup.</li>
+        <li>Variant choice changes cart line identity and pricing state cleanly.</li>
+        <li>Cart quantities survive refreshes with local storage.</li>
+        <li>Checkout blocks invalid email, empty address and empty cart states.</li>
+        <li>Keyboard focus, labels, ARIA state and reduced-motion behavior are included.</li>
+      </ul>
+      <p class="muted">This is an original demo for evaluating implementation quality. It is not client work and does not process real payments.</p>
+    </section>
+  </main>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="cart-head"><h2 id="cartTitle">Your cart</h2><button class="icon-button" id="cartClose" aria-label="Close cart">×</button></div>
+    <div id="cartLines" class="cart-lines"></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+      <p class="muted">Shipping and taxes calculated at checkout.</p>
+      <button id="checkoutToggle" class="primary wide">Checkout</button>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop" hidden></div>
+  <dialog id="checkoutDialog">
+    <form id="checkoutForm" novalidate>
+      <div class="dialog-head"><div><p class="eyebrow">Demo checkout</p><h2>Delivery details</h2></div><button type="button" class="icon-button" id="checkoutClose" aria-label="Close checkout">×</button></div>
+      <label>Email<input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label>Full name<input id="fullName" name="fullName" autocomplete="name" required></label>
+      <label>Address<textarea id="address" name="address" autocomplete="street-address" required></textarea></label>
+      <p class="form-error" id="formError" role="alert"></p>
+      <button class="primary wide" type="submit">Place demo order</button>
+      <p class="muted">No payment details are collected.</p>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
