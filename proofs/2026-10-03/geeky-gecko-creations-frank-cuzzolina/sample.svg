@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#f2f5ed"/>
+  <text x="70" y="70" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#65705f">LOCAL PROOF OF WORK</text>
+  <text x="70" y="120" font-family="Arial,sans-serif" font-size="42" font-weight="800" fill="#192018">Expired countdown cleanup</text>
+  <rect x="70" y="165" width="500" height="410" rx="24" fill="#ffffff" stroke="#d8ded3"/>
+  <rect x="630" y="165" width="500" height="410" rx="24" fill="#ffffff" stroke="#d8ded3"/>
+  <text x="105" y="215" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#687262">BEFORE, VERIFIED LIVE STATE</text>
+  <text x="665" y="215" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#687262">AFTER, LOCAL REPAIR SAMPLE</text>
+  <text x="105" y="255" font-family="Arial,sans-serif" font-size="26" font-weight="800" fill="#192018">Geeky Gecko Creations</text>
+  <text x="665" y="255" font-family="Arial,sans-serif" font-size="26" font-weight="800" fill="#192018">Geeky Gecko Creations</text>
+  <rect x="105" y="290" width="430" height="190" rx="18" fill="#20281e"/>
+  <rect x="665" y="290" width="430" height="190" rx="18" fill="#20281e"/>
+  <text x="320" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="#f6faef">20-50% off leos</text>
+  <text x="880" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="#f6faef">20-50% off leos</text>
+  <text x="320" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#c9d6c0">+ New leos coming soon +</text>
+  <text x="880" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#c9d6c0">+ New leos coming soon +</text>
+  <text x="320" y="420" text-anchor="middle" font-family="monospace" font-size="34" font-weight="800" fill="#ffffff">00 : 00 : 00 : 00</text>
+  <text x="320" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#aebba5">DAYS     HOURS     MINUTES     SECONDS</text>
+  <rect x="700" y="390" width="360" height="60" rx="14" fill="#ecf6e8"/>
+  <text x="880" y="417" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#224c24">Sale copy stays visible.</text>
+  <text x="880" y="439" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#224c24">Expired countdown is removed.</text>
+  <rect x="105" y="500" width="430" height="42" rx="10" fill="#fff0ed"/>
+  <rect x="665" y="500" width="430" height="42" rx="10" fill="#eaf6e9"/>
+  <text x="320" y="527" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#943f36">FAIL: expired timer remains at all zeros</text>
+  <text x="880" y="527" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#286132">PASS: no zeroed timer shown to shoppers</text>
+  <text x="70" y="625" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#192018">US$39 scope: disable the expired timer or configure a valid end date, preserve sale copy, verify desktop + mobile.</text>
+</svg>
