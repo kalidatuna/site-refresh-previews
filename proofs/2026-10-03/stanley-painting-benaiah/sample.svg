@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Stanley Painting estimate email-link local repair proof</title>
+  <desc id="desc">Original before and after diagram showing the published estimate contact email linked to email@example.com before repair and to the published Gmail after repair.</desc>
+  <rect width="1200" height="630" fill="#f5f3ef"/>
+  <text x="70" y="72" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#77716c">LOCAL PROOF OF WORK</text>
+  <text x="70" y="132" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#22201e">Estimate contact email repair</text>
+  <text x="70" y="174" font-family="Arial, sans-serif" font-size="22" fill="#746f6a">Stanley Painting</text>
+  <rect x="70" y="220" width="500" height="260" rx="24" fill="#ffffff" stroke="#ddd9d2"/>
+  <text x="105" y="265" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#817a73">BEFORE, VERIFIED LIVE STATE</text>
+  <text x="105" y="320" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#22201e">bdstanley32@gmail.com</text>
+  <rect x="105" y="354" width="390" height="40" rx="10" fill="#fff0ed"/>
+  <text x="120" y="380" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="#973e32">mailto:email@example.com</text>
+  <text x="105" y="435" font-family="Arial, sans-serif" font-size="17" fill="#746f6a">Estimate contact opens the placeholder recipient.</text>
+  <rect x="630" y="220" width="500" height="260" rx="24" fill="#ffffff" stroke="#ddd9d2"/>
+  <text x="665" y="265" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#817a73">AFTER, LOCAL REPAIR SAMPLE</text>
+  <text x="665" y="320" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#22201e">bdstanley32@gmail.com</text>
+  <rect x="665" y="354" width="405" height="40" rx="10" fill="#edf8ef"/>
+  <text x="680" y="380" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="#2f6741">mailto:bdstanley32@gmail.com</text>
+  <text x="665" y="435" font-family="Arial, sans-serif" font-size="17" fill="#746f6a">The visible inbox and click destination match.</text>
+  <text x="70" y="550" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#22201e">NOT DEPLOYED CLIENT WORK</text>
+  <text x="70" y="582" font-family="Arial, sans-serif" font-size="17" fill="#746f6a">Original local demonstration. No live site, form, email, or customer data was changed.</text>
+</svg>
