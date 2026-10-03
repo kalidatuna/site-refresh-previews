@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#eef1f4"/>
+  <text x="70" y="65" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#66707b">LOCAL PROOF OF WORK · NOT DEPLOYED CLIENT WORK</text>
+  <text x="70" y="112" font-family="Arial,sans-serif" font-size="39" font-weight="800" fill="#15171b">Empty catalog route cleanup</text>
+  <rect x="70" y="150" width="500" height="420" rx="23" fill="#ffffff" stroke="#d8dde3"/>
+  <rect x="630" y="150" width="500" height="420" rx="23" fill="#ffffff" stroke="#d8dde3"/>
+  <text x="102" y="195" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#6b7480">BEFORE · VERIFIED LIVE STATE</text>
+  <text x="662" y="195" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#6b7480">AFTER · LOCAL REPAIR SAMPLE</text>
+  <text x="102" y="232" font-family="Arial,sans-serif" font-size="25" font-weight="800" fill="#15171b">Aureon</text>
+  <text x="662" y="232" font-family="Arial,sans-serif" font-size="25" font-weight="800" fill="#15171b">Aureon</text>
+  <rect x="102" y="255" width="436" height="44" rx="11" fill="#17191d"/>
+  <rect x="662" y="255" width="436" height="44" rx="11" fill="#17191d"/>
+  <text x="320" y="282" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f4f6f8">Ships in 1–2 business days</text>
+  <text x="880" y="282" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f4f6f8">Catalog updates coming soon</text>
+  <text x="102" y="330" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#15171b">Shop   Chargers   Desk   About   Support</text>
+  <text x="662" y="330" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#15171b">About   Support</text>
+  <rect x="102" y="355" width="436" height="105" rx="14" fill="#fff1ee"/>
+  <rect x="662" y="355" width="436" height="105" rx="14" fill="#eaf4ec"/>
+  <text x="320" y="402" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#923d35">Chargers</text>
+  <text x="320" y="432" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" font-weight="800" fill="#923d35">No products found.</text>
+  <text x="880" y="397" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#285c32">Catalog links hidden</text>
+  <text x="880" y="426" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#285c32">until products are published</text>
+  <rect x="102" y="480" width="436" height="47" rx="10" fill="#fff0ed"/>
+  <rect x="662" y="480" width="436" height="47" rx="10" fill="#eaf6e9"/>
+  <text x="320" y="509" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#943f36">FAIL: retail links lead to empty collections</text>
+  <text x="880" y="509" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#286132">PASS: no empty collection linked to shoppers</text>
+  <text x="70" y="620" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#15171b">US$39 scope: hide empty Shop / Chargers / Desk routes and shipping claim until products are published; verify desktop + mobile.</text>
+</svg>
