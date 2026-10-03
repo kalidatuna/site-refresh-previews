@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f2f4f1"/>
+  <text x="70" y="72" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#526153">LOCAL PROOF OF WORK · NO LIVE CHANGES</text>
+  <text x="70" y="126" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#20251f">FTG Källefall · Contact form repair</text>
+  <text x="70" y="164" font-family="Arial, sans-serif" font-size="21" fill="#647064">Verified missing Contact Form 7 state and bounded local repair mock</text>
+  <rect x="70" y="210" width="505" height="410" rx="22" fill="#fff" stroke="#d8ded7"/>
+  <rect x="625" y="210" width="505" height="410" rx="22" fill="#fff" stroke="#d8ded7"/>
+  <text x="100" y="252" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#738073">BEFORE · VERIFIED LIVE STATE</text>
+  <text x="655" y="252" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#738073">AFTER · LOCAL REPAIR MOCK</text>
+  <text x="100" y="298" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#20251f">FTG Källefall</text>
+  <text x="655" y="298" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#20251f">FTG Källefall</text>
+  <text x="100" y="326" font-family="Arial, sans-serif" font-size="17" fill="#6e786d">Eglė Rakštienė · Managing Director</text>
+  <text x="655" y="326" font-family="Arial, sans-serif" font-size="17" fill="#6e786d">Eglė Rakštienė · Managing Director</text>
+  <rect x="100" y="360" width="445" height="210" rx="16" fill="#fbfcfa" stroke="#dde3dc"/>
+  <rect x="655" y="360" width="445" height="210" rx="16" fill="#fbfcfa" stroke="#dde3dc"/>
+  <text x="125" y="398" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#20251f">Sales inquiry</text>
+  <text x="680" y="398" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#20251f">Sales inquiry</text>
+  <text x="125" y="430" font-family="Arial, sans-serif" font-size="15" fill="#596359">egle.rakstiene@ftgforest.com</text>
+  <text x="680" y="430" font-family="Arial, sans-serif" font-size="15" fill="#596359">egle.rakstiene@ftgforest.com</text>
+  <rect x="125" y="458" width="395" height="70" rx="12" fill="#fff1ef" stroke="#dfb7b1"/>
+  <text x="145" y="500" font-family="monospace" font-size="17" font-weight="700" fill="#8b3c34">Error: Contact form not found.</text>
+  <rect x="680" y="458" width="185" height="40" rx="9" fill="#fff" stroke="#d6ddd5"/><text x="695" y="484" font-family="Arial, sans-serif" font-size="14" fill="#758075">Your name</text>
+  <rect x="880" y="458" width="195" height="40" rx="9" fill="#fff" stroke="#d6ddd5"/><text x="895" y="484" font-family="Arial, sans-serif" font-size="14" fill="#758075">Your email</text>
+  <rect x="680" y="512" width="395" height="40" rx="9" fill="#eff8f1" stroke="#b9d8c1"/><text x="695" y="538" font-family="monospace" font-size="14" font-weight="700" fill="#2d6540">PASS · intended form visible again</text>
+  <rect x="70" y="650" width="1060" height="62" rx="15" fill="#253229"/>
+  <text x="95" y="688" font-family="Arial, sans-serif" font-size="17" fill="#f4f7f3">US$39 fixed · reconnect the missing form and verify desktop/mobile rendering and validation.</text>
+</svg>
