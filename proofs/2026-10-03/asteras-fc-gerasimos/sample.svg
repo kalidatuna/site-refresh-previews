@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f5f6f8"/><text x="60" y="70" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#222">Local before/after demonstration · not deployed client work</text>
+<text x="60" y="125" font-family="Arial,sans-serif" font-size="40" font-weight="700" fill="#111">Asteras FC · Gerasimos Zhsimatos</text>
+<rect x="60" y="170" width="500" height="390" rx="22" fill="#fff" stroke="#bbb"/><text x="90" y="220" font-family="Arial,sans-serif" font-size="28" font-weight="700">Before</text>
+<foreignObject x="90" y="250" width="440" height="250"><div xmlns="http://www.w3.org/1999/xhtml" style="font:22px Arial,sans-serif;color:#842c20;background:#fff0ed;padding:18px;border-radius:12px;line-height:1.4">Visible founder email Zhsimatos@yahoo.com opens mailto:info@mysite.com.</div></foreignObject>
+<rect x="640" y="170" width="500" height="390" rx="22" fill="#fff" stroke="#bbb"/><text x="670" y="220" font-family="Arial,sans-serif" font-size="28" font-weight="700">Fixed sample</text>
+<foreignObject x="670" y="250" width="440" height="250"><div xmlns="http://www.w3.org/1999/xhtml" style="font:22px Arial,sans-serif;color:#225f31;background:#eef8ee;padding:18px;border-radius:12px;line-height:1.4">Link target corrected to the already-published founder Yahoo address; desktop/mobile behavior rechecked.</div></foreignObject>
+<text x="60" y="625" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#333">Proposed bounded repair: US$29 fixed</text>
+<text x="60" y="660" font-family="Arial,sans-serif" font-size="18" fill="#666">No live-site change. This proof sends no data.</text></svg>
