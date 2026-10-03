@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <rect width="1440" height="900" fill="#f5f7fb"/>
+  <text x="72" y="78" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#15233b">Claiko assisted mobility MVP</text>
+  <text x="72" y="114" font-family="Arial, sans-serif" font-size="18" fill="#65738a">Concept sample based on the public brief: booking, companion/driver flow, admin monitoring, pickup to exact destination.</text>
+
+  <rect x="70" y="156" width="350" height="650" rx="34" fill="#ffffff" stroke="#dbe2ec" stroke-width="2"/>
+  <rect x="92" y="180" width="306" height="604" rx="24" fill="#ffffff"/>
+  <text x="116" y="222" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1b6fb8">CLAiKO</text>
+  <text x="116" y="260" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#15233b">Book supported ride</text>
+  <text x="116" y="292" font-family="Arial, sans-serif" font-size="15" fill="#6c788a">A companion stays through the final handoff.</text>
+
+  <text x="116" y="338" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#566479">PICKUP</text>
+  <rect x="116" y="352" width="258" height="54" rx="12" fill="#f7f9fc" stroke="#d8e0ea"/>
+  <circle cx="138" cy="379" r="7" fill="#2f9d73"/>
+  <text x="155" y="385" font-family="Arial, sans-serif" font-size="15" fill="#1e2d42">Home, Indore</text>
+
+  <text x="116" y="442" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#566479">EXACT DESTINATION</text>
+  <rect x="116" y="456" width="258" height="78" rx="12" fill="#f7f9fc" stroke="#d8e0ea"/>
+  <circle cx="138" cy="483" r="7" fill="#1b6fb8"/>
+  <text x="155" y="486" font-family="Arial, sans-serif" font-size="15" fill="#1e2d42">City Hospital, OPD 4</text>
+  <text x="155" y="510" font-family="Arial, sans-serif" font-size="13" fill="#6c788a">2nd floor, Room 214</text>
+
+  <text x="116" y="570" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#566479">ASSISTANCE</text>
+  <rect x="116" y="584" width="258" height="48" rx="12" fill="#eef8f4"/>
+  <text x="136" y="614" font-family="Arial, sans-serif" font-size="14" fill="#276b55">Companion required until room handoff</text>
+
+  <rect x="116" y="672" width="258" height="58" rx="14" fill="#1b6fb8"/>
+  <text x="175" y="708" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Request supported ride</text>
+  <text x="116" y="756" font-family="Arial, sans-serif" font-size="12" fill="#8490a0">Core acceptance: pickup + exact destination saved together.</text>
+
+  <rect x="545" y="156" width="350" height="650" rx="34" fill="#ffffff" stroke="#dbe2ec" stroke-width="2"/>
+  <rect x="567" y="180" width="306" height="604" rx="24" fill="#ffffff"/>
+  <text x="591" y="222" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1b6fb8">CLAiKO</text>
+  <text x="591" y="260" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#15233b">Companion matched</text>
+  <text x="591" y="292" font-family="Arial, sans-serif" font-size="15" fill="#6c788a">Ride CK-1042</text>
+
+  <rect x="591" y="326" width="258" height="96" rx="16" fill="#f7f9fc" stroke="#d8e0ea"/>
+  <circle cx="626" cy="374" r="22" fill="#dcecf8"/>
+  <text x="616" y="381" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#1b6fb8">AM</text>
+  <text x="662" y="361" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#15233b">Aarav M.</text>
+  <text x="662" y="386" font-family="Arial, sans-serif" font-size="13" fill="#6c788a">Driver + companion</text>
+  <text x="662" y="407" font-family="Arial, sans-serif" font-size="13" fill="#2f9d73">Confirmed</text>
+
+  <text x="591" y="468" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#566479">RIDE STATUS</text>
+  <line x1="611" y1="500" x2="611" y2="642" stroke="#d8e0ea" stroke-width="4"/>
+  <circle cx="611" cy="504" r="10" fill="#2f9d73"/>
+  <text x="638" y="510" font-family="Arial, sans-serif" font-size="15" fill="#1e2d42">Accepted</text>
+  <circle cx="611" cy="552" r="10" fill="#2f9d73"/>
+  <text x="638" y="558" font-family="Arial, sans-serif" font-size="15" fill="#1e2d42">Passenger picked up</text>
+  <circle cx="611" cy="600" r="10" fill="#1b6fb8"/>
+  <text x="638" y="606" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e2d42">At hospital entrance</text>
+  <circle cx="611" cy="648" r="10" fill="#ffffff" stroke="#aab4c2" stroke-width="3"/>
+  <text x="638" y="654" font-family="Arial, sans-serif" font-size="15" fill="#1e2d42">Room 214 handoff</text>
+
+  <rect x="591" y="700" width="258" height="54" rx="14" fill="#eef8f4"/>
+  <text x="619" y="733" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#276b55">Complete only after exact handoff</text>
+
+  <rect x="970" y="156" width="400" height="650" rx="28" fill="#ffffff" stroke="#dbe2ec" stroke-width="2"/>
+  <text x="1002" y="206" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1b6fb8">CLAiKO ADMIN</text>
+  <text x="1002" y="246" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#15233b">Live ride monitor</text>
+  <text x="1002" y="276" font-family="Arial, sans-serif" font-size="14" fill="#6c788a">Basic MVP panel for ride assignment and status.</text>
+
+  <rect x="1002" y="316" width="336" height="86" rx="14" fill="#eef8f4"/>
+  <text x="1022" y="342" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#39705e">ACTIVE RIDES</text>
+  <text x="1022" y="380" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#193c31">6</text>
+  <text x="1100" y="379" font-family="Arial, sans-serif" font-size="13" fill="#39705e">2 awaiting companion</text>
+
+  <rect x="1002" y="432" width="336" height="224" rx="14" fill="#ffffff" stroke="#d8e0ea"/>
+  <text x="1022" y="462" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#566479">CK-1042</text>
+  <text x="1022" y="490" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#15233b">Home, Indore → City Hospital</text>
+  <text x="1022" y="516" font-family="Arial, sans-serif" font-size="13" fill="#6c788a">Exact: OPD 4, 2nd floor, Room 214</text>
+  <line x1="1022" y1="540" x2="1318" y2="540" stroke="#e6ebf1"/>
+  <text x="1022" y="568" font-family="Arial, sans-serif" font-size="13" fill="#6c788a">Passenger</text>
+  <text x="1150" y="568" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1e2d42">Priya S.</text>
+  <text x="1022" y="596" font-family="Arial, sans-serif" font-size="13" fill="#6c788a">Companion</text>
+  <text x="1150" y="596" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1e2d42">Aarav M.</text>
+  <text x="1022" y="624" font-family="Arial, sans-serif" font-size="13" fill="#6c788a">Status</text>
+  <text x="1150" y="624" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1b6fb8">At hospital entrance</text>
+
+  <rect x="1002" y="690" width="154" height="50" rx="12" fill="#1b6fb8"/>
+  <text x="1035" y="721" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Open ride</text>
+  <rect x="1184" y="690" width="154" height="50" rx="12" fill="#ffffff" stroke="#bfc9d6"/>
+  <text x="1206" y="721" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#35455a">Reassign</text>
+
+  <text x="72" y="856" font-family="Arial, sans-serif" font-size="13" fill="#738094">Prototype only. No live passenger data, maps, payments, or production integrations are represented.</text>
+</svg>
