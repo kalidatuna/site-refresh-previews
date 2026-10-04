@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$25 Website Audit Sample - Aureon / Inner State</title>
+  <style>
+    :root {
+      --ink: #17191d;
+      --muted: #626973;
+      --line: #d9dde3;
+      --paper: #ffffff;
+      --soft: #f5f7f9;
+      --accent: #176b58;
+      --accent-soft: #e8f4f0;
+      --warn: #8a4b14;
+      --warn-soft: #fff2e6;
+      --dark: #111820;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: #e9edf1;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 12mm auto;
+      padding: 15mm 16mm 13mm;
+      background: var(--paper);
+      box-shadow: 0 12px 36px rgba(21, 29, 38, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      padding-bottom: 8mm;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .price {
+      background: var(--dark);
+      color: #fff;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    h1 {
+      margin: 10mm 0 3mm;
+      max-width: 155mm;
+      font-size: 31px;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .lede {
+      margin: 0;
+      max-width: 158mm;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 8mm 0 8mm;
+    }
+
+    .meta-card {
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 10px 11px;
+      background: var(--soft);
+    }
+
+    .meta-card span,
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .summary {
+      border-radius: 15px;
+      padding: 15px 16px;
+      background: var(--accent-soft);
+      border: 1px solid #c9e5dc;
+      margin-bottom: 8mm;
+    }
+
+    .summary strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .summary p { margin: 0; font-size: 13px; }
+
+    .finding {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 7mm;
+    }
+
+    .finding-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 13px 15px;
+      background: var(--dark);
+      color: #fff;
+      align-items: center;
+    }
+
+    .finding-head h2 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .priority {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      background: #fff;
+      color: var(--dark);
+      border-radius: 999px;
+      padding: 5px 8px;
+      white-space: nowrap;
+    }
+
+    .finding-body {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 0;
+    }
+
+    .finding-body > div {
+      padding: 14px 15px;
+    }
+
+    .finding-body > div + div {
+      border-left: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .finding-body p {
+      margin: 0 0 9px;
+      font-size: 12.5px;
+    }
+
+    .route-list {
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
+    }
+
+    .route-list li {
+      padding: 7px 9px;
+      border: 1px solid #e3d3c2;
+      border-radius: 8px;
+      background: var(--warn-soft);
+      color: #573014;
+      font: 700 10.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      word-break: break-word;
+    }
+
+    .signal {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-top: 10px;
+      color: var(--warn);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .fix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 6mm 0 0;
+    }
+
+    .fix-step {
+      min-height: 68px;
+      padding: 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fff;
+    }
+
+    .fix-step b {
+      display: block;
+      font-size: 11.5px;
+      margin-bottom: 3px;
+    }
+
+    .fix-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .evidence {
+      margin-top: 7mm;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--soft);
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+
+    .evidence code {
+      color: var(--ink);
+      font-size: 10px;
+      word-break: break-all;
+    }
+
+    .section-title {
+      margin: 0 0 5mm;
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-bottom: 8mm;
+    }
+
+    .check {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 9px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 10px 11px;
+    }
+
+    .check-mark {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .check b {
+      display: block;
+      font-size: 11.5px;
+      margin-bottom: 2px;
+    }
+
+    .check p {
+      margin: 0;
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 0.84fr;
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 8mm;
+    }
+
+    .product-main,
+    .product-side {
+      padding: 15px;
+    }
+
+    .product-side {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .product h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .product ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 11.5px;
+    }
+
+    .product li { margin: 5px 0; }
+    .product-side p {
+      margin: 0 0 7px;
+      font-size: 11px;
+      color: #dce3ea;
+    }
+
+    .product-side .big {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      color: #fff;
+      margin: 5px 0 9px;
+    }
+
+    .truth {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 13px;
+      margin-bottom: 8mm;
+    }
+
+    .truth p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding: 13px 15px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 14px;
+    }
+
+    .cta strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .cta span { font-size: 10.5px; color: #d9eee8; }
+    .cta .email {
+      font-weight: 850;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .footer {
+      position: absolute;
+      left: 16mm;
+      right: 16mm;
+      bottom: 8mm;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: #7a818a;
+      font-size: 8.5px;
+    }
+
+    @media (max-width: 760px) {
+      body { background: #fff; }
+      .page { width: 100%; min-height: auto; margin: 0; padding: 24px 18px 60px; box-shadow: none; }
+      .meta, .finding-body, .fix-grid, .checklist, .product { grid-template-columns: 1fr; }
+      .finding-body > div + div { border-left: 0; border-top: 1px solid var(--line); }
+      .footer { left: 18px; right: 18px; bottom: 20px; }
+      .cta { align-items: flex-start; flex-direction: column; }
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 12mm 13mm 10mm;
+        box-shadow: none;
+        overflow: hidden;
+        page-break-after: always;
+      }
+      .page-content {
+        width: auto;
+        zoom: 1;
+      }
+      .meta { grid-template-columns: repeat(3, 1fr); }
+      .finding-body { grid-template-columns: 1.12fr 0.88fr; }
+      .fix-grid, .checklist { grid-template-columns: 1fr 1fr; }
+      .product { grid-template-columns: 1fr 0.84fr; }
+      .finding-body > div + div {
+        border-left: 1px solid var(--line);
+        border-top: 0;
+      }
+      .cta {
+        align-items: center;
+        flex-direction: row;
+      }
+      .page:first-child .topbar { padding-bottom: 5mm; }
+      .page:first-child h1 {
+        margin-top: 7mm;
+        margin-bottom: 2mm;
+        font-size: 28px;
+      }
+      .page:first-child .meta { margin: 6mm 0; }
+      .page:first-child .summary {
+        padding: 12px 14px;
+        margin-bottom: 5mm;
+      }
+      .page:first-child .finding { margin-bottom: 5mm; }
+      .page:first-child .fix-grid {
+        gap: 6px;
+        margin-top: 3mm;
+      }
+      .page:first-child .fix-step {
+        min-height: 0;
+        padding: 8px 9px;
+      }
+      .page:first-child .evidence {
+        margin-top: 4mm;
+        padding: 9px 10px;
+        font-size: 9.5px;
+      }
+      .footer {
+        left: 13mm;
+        right: 13mm;
+        bottom: 7mm;
+      }
+      .page:last-child { page-break-after: auto; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="page-content">
+    <div class="topbar">
+      <div>
+        <div class="brand">Datuna Jamburia / Website Audit</div>
+        <div class="label" style="margin-top:6px">Public site review sample</div>
+      </div>
+      <div class="price">$25 audit product</div>
+    </div>
+
+    <h1>Aureon / Inner State: empty retail routes in primary navigation</h1>
+    <p class="lede">
+      One clear customer-path issue was verified across three public collection pages. The recommended repair is small, reversible, and easy to verify.
+    </p>
+
+    <div class="meta">
+      <div class="meta-card">
+        <span>Checked</span>
+        <strong>October 4, 2026</strong>
+      </div>
+      <div class="meta-card">
+        <span>Surface</span>
+        <strong>Public Shopify storefront</strong>
+      </div>
+      <div class="meta-card">
+        <span>Review type</span>
+        <strong>Conversion-path QA</strong>
+      </div>
+    </div>
+
+    <div class="summary">
+      <strong>Finding: active retail links lead to empty catalogs.</strong>
+      <p>
+        The header exposes Shop, Chargers, and Desk. Each route returns a normal page but shows "No products found." The storefront also advertises "Ships in 1-2 business days," which suggests an active catalog while the visible retail routes are empty.
+      </p>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <h2>01 / Shopper path reaches a dead end</h2>
+        <div class="priority">High visibility</div>
+      </div>
+      <div class="finding-body">
+        <div>
+          <span class="label">Verified live behavior</span>
+          <p>These public retail routes were observed with the same visible empty state:</p>
+          <ul class="route-list">
+            <li>statecore.store/collections/all</li>
+            <li>statecore.store/collections/chargers</li>
+            <li>statecore.store/collections/desk</li>
+          </ul>
+          <div class="signal">Observed result: "No products found."</div>
+        </div>
+        <div>
+          <span class="label">Why it matters</span>
+          <p>
+            A visitor can follow the store's main retail navigation and land on a page with nothing to browse or buy.
+          </p>
+          <p>
+            This review does not claim lost revenue or missing inventory. It only reports the visible customer path.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <span class="label">Recommended repair</span>
+    <div class="fix-grid">
+      <div class="fix-step">
+        <b>1. Hide empty retail routes</b>
+        <p>Temporarily remove Shop, Chargers, and Desk from customer navigation while those collections contain no products.</p>
+      </div>
+      <div class="fix-step">
+        <b>2. Neutralize the shipping claim</b>
+        <p>Replace the 1-2 business day shipping message with simple catalog-status copy until products are published.</p>
+      </div>
+      <div class="fix-step">
+        <b>3. Keep useful pages visible</b>
+        <p>Preserve About and Support so visitors still have access to business and help information.</p>
+      </div>
+      <div class="fix-step">
+        <b>4. Restore retail links later</b>
+        <p>Bring the collection routes back only after real inventory is available and the shopper path can be tested.</p>
+      </div>
+    </div>
+
+    <div class="evidence">
+      <b>Evidence basis.</b> The public storefront review recorded the three empty collection routes and the live shipping message. A separate local repair sample was validated at 1440 px desktop and 390 px mobile with zero horizontal overflow, no external requests, and no console or page errors. No live-site change was made.
+    </div>
+    </div>
+
+    <div class="footer">
+      <span>Sample report based on a real public-site review.</span>
+      <span>Page 1 / 2</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-content">
+    <div class="topbar">
+      <div>
+        <div class="brand">Verification and product scope</div>
+        <div class="label" style="margin-top:6px">Aureon / Inner State sample</div>
+      </div>
+      <div class="price">$25 fixed audit</div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:10mm">Acceptance checks for this finding</h2>
+    <div class="checklist">
+      <div class="check">
+        <div class="check-mark">1</div>
+        <div><b>Retail links are hidden while empty</b><p>Shop, Chargers, and Desk do not appear in shopper navigation until products exist.</p></div>
+      </div>
+      <div class="check">
+        <div class="check-mark">2</div>
+        <div><b>Empty-state dead ends are removed</b><p>A visitor cannot reach the verified "No products found." collection state through primary retail navigation.</p></div>
+      </div>
+      <div class="check">
+        <div class="check-mark">3</div>
+        <div><b>Catalog copy matches current state</b><p>The storefront avoids an active shipping promise while the visible retail catalog is empty.</p></div>
+      </div>
+      <div class="check">
+        <div class="check-mark">4</div>
+        <div><b>About and Support remain available</b><p>Informational routes stay accessible while retail routes are temporarily hidden.</p></div>
+      </div>
+      <div class="check">
+        <div class="check-mark">5</div>
+        <div><b>Desktop layout stays clean</b><p>Validate the updated navigation at a normal desktop width with no horizontal overflow.</p></div>
+      </div>
+      <div class="check">
+        <div class="check-mark">6</div>
+        <div><b>Mobile layout stays clean</b><p>Validate the same state at 390 px and confirm navigation remains usable.</p></div>
+      </div>
+    </div>
+
+    <h2 class="section-title">What the $25 audit includes</h2>
+    <div class="product">
+      <div class="product-main">
+        <h3>Focused public-site audit</h3>
+        <ul>
+          <li>Review of up to 5 public pages or customer paths.</li>
+          <li>Desktop and mobile checks on the visible experience.</li>
+          <li>Up to 3 prioritized findings with exact evidence.</li>
+          <li>Specific recommended fixes and acceptance checks.</li>
+          <li>Buyer-ready HTML and PDF report.</li>
+        </ul>
+      </div>
+      <div class="product-side">
+        <span class="label" style="color:#aeb8c2">Audit fee</span>
+        <span class="big">$25</span>
+        <p>Implementation is quoted separately when a live fix requires access or code changes.</p>
+        <p>No security testing, authenticated-area review, or live-site edits are included in the audit fee.</p>
+      </div>
+    </div>
+
+    <div class="truth">
+      <span class="label">Truthfulness note</span>
+      <p>
+        This sample uses a real public site that was reviewed during Lane C outreach and included in the October 4, 2026 send batch. It does not imply that Aureon / Inner State purchased this $25 audit, accepted a repair, or became a client. The live site was not modified. The earlier outreach repair scope for this specific issue was a separate $39 fixed offer.
+      </p>
+    </div>
+
+    <div class="truth">
+      <span class="label">Reusable report rule</span>
+      <p>
+        Replace the business name, checked date, tested URLs, observed behavior, evidence, recommendation, and acceptance checks. Keep claims limited to what was actually reproduced. Avoid estimated revenue loss, invented urgency, or statements about backend causes unless they were verified.
+      </p>
+    </div>
+
+    <div class="cta">
+      <div>
+        <strong>Need a focused audit of your site?</strong>
+        <span>Send the URL and the customer path you care about most.</span>
+      </div>
+      <div class="email">jamburiawork@gmail.com</div>
+    </div>
+    </div>
+
+    <div class="footer">
+      <span>Datuna Jamburia / Public-site QA and bounded technical fixes</span>
+      <span>Page 2 / 2</span>
+    </div>
+  </section>
+</body>
+</html>
