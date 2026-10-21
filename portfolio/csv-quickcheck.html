@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Try a local-only CSV quality preview using synthetic data, then request a fixed-scope CSV audit.">
+<title>CSV sample quality preview · Independent technical builder</title>
+<style>
+:root{font-family:system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#0e131b;color:#f4f5f7;line-height:1.55}
+main{max-width:850px;margin:40px auto;padding:0 22px 60px}
+a{color:#a1d9ff}a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid #a1d9ff;outline-offset:3px}
+h1{font-size:clamp(28px,5vw,48px);line-height:1.15}
+.lead{color:#b8c7d7}.panel{background:#171f2b;border:1px solid #344458;border-radius:16px;padding:22px;margin:22px 0}
+label{display:block;font-weight:700;margin-bottom:10px}
+textarea{width:100%;min-height:180px;padding:12px;border:1px solid #657e98;border-radius:8px;background:#0d1622;color:#fff;font:15px/1.5 monospace;resize:vertical}
+button{background:#a1d9ff;color:#081521;border:0;border-radius:8px;padding:12px 20px;font-size:16px;font-weight:800;cursor:pointer;margin:13px 0}
+dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px}
+dl div{background:#0e1722;padding:12px;border-radius:8px}
+dt{color:#bfd2e6;font-size:13px}dd{font-size:26px;font-weight:800;margin:4px 0}
+small{color:#bfcede}#error{color:#ffb4b4}
+</style>
+</head>
+<body>
+<main>
+<p><a href="fixed-scope-data-work.html">Back to fixed-scope services</a></p>
+<h1>CSV sample quality preview</h1>
+<p class="lead">Paste synthetic or redacted CSV to check missing cells, unequal row widths and duplicate records. Processing happens inside your browser. Nothing is transmitted or stored by this page.</p>
+<div class="panel">
+<label for="data">CSV sample, maximum 1,000 rows and 100,000 characters</label>
+<textarea id="data" spellcheck="false">id,name,city
+1,Alex,Tbilisi
+2,Sam,
+2,Sam,
+3,"Taylor, J.",Batumi</textarea>
+<button id="check" type="button">Analyze sample</button>
+<p id="error" role="alert" aria-live="polite"></p>
+<section aria-labelledby="results-title">
+<h2 id="results-title">Sample results</h2>
+<dl id="results" aria-live="polite"></dl>
+</section>
+<small>This is a sample checker, not a comprehensive audit. It does not validate business rules, dates, unique IDs, schema types or formulas. Please do not paste private production files.</small>
+</div>
+<p>Need a documented $25 CSV validation audit with acceptance checks? <a href="mailto:jamburiawork@gmail.com?subject=CSV%20audit%20inquiry">Send a sanitized inquiry</a>. Actual contracting and lawful receiving arrangements must be verified before work.</p>
+</main>
+<script src="csv-quickcheck.js"></script>
+<script>
+(function(){
+var sample=document.getElementById("data"),output=document.getElementById("results"),error=document.getElementById("error");
+document.getElementById("check").addEventListener("click",function(){
+output.replaceChildren();error.textContent="";
+try{
+var metrics=window.CSVQuickCheck.auditCSV(sample.value);
+var labels=[["records","Data rows"],["columns","Header columns"],["blankCells","Blank cells"],["widthErrors","Rows with different column count"],["duplicateRecords","Duplicate data rows"],["headerDuplicates","Repeated header names"]];
+labels.forEach(function(item){
+var container=document.createElement("div"),title=document.createElement("dt"),value=document.createElement("dd");
+title.textContent=item[1];value.textContent=String(metrics[item[0]]);container.append(title,value);output.appendChild(container);
+});
+}catch(e){error.textContent=e.message;}
+});
+document.getElementById("check").click();
+})();
+</script>
+</body>
+</html>
